@@ -1,0 +1,116 @@
+Create database RetroStore;
+
+Use RetroStore;
+
+Create table Categorias (Id_Categoria int PRIMARY KEY AUTO_INCREMENT,
+Nombre_Categoria nvarchar(24) NOT NULL);
+
+Create table Productos (Id_Producto int PRIMARY KEY AUTO_INCREMENT,
+Id_Categoria int NOT NULL,
+Marca nvarchar(16) NOT NULL,
+Modelo nvarchar(64) NOT NULL,
+Descripcion nvarchar(200) NOT NULL,
+Caracteristicas nvarchar(300) NOT NULL,
+Precio decimal (8,2) NOT NULL,
+Stock int NOT NULL);
+
+ALTER TABLE Productos
+ADD FOREIGN KEY (Id_Categoria)
+REFERENCES Categorias (Id_Categoria)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+Create table Usuarios (Id_Usuario int PRIMARY KEY AUTO_INCREMENT,
+Nombre_Cliente nvarchar(20) NOT NULL,
+Apellidos nvarchar(30) NOT NULL,
+Usuario nvarchar(15) NOT NULL,
+Contraseña nvarchar(20) NOT NULL,
+No_Telefono varchar(10),
+Fecha_Nac date NOT NULL);
+
+Create table Sesion_Usuario (Id_Usuario int NOT NULL,
+Sesion bit NOT NULL);
+
+ALTER TABLE Sesion_Usuario
+ADD FOREIGN KEY (Id_Usuario)
+REFERENCES Usuarios (Id_Usuario)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+Create table Metodo_de_Pago (Id_MetodoPago int PRIMARY KEY AUTO_INCREMENT,
+No_Tarjeta varchar(16),
+Id_Usuario int NOT NULL,
+Nombre_Titular nvarchar(64) NOT NULL,
+Fecha_Vencimiento date NOT NULL,
+Clave varchar(3) NOT NULL);
+
+ALTER TABLE Metodo_de_Pago
+ADD FOREIGN KEY (Id_Usuario)
+REFERENCES Usuarios (Id_Usuario)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+Create table Compra (Id_Compra int PRIMARY KEY AUTO_INCREMENT,
+Id_Usuario int NOT NULL,
+Fecha_Compra date NOT NULL,
+Direccion_Envio nvarchar(64) NOT NULL,
+CP_Envio varchar (5) NOT NULL);
+
+ALTER TABLE Compra
+ADD FOREIGN KEY (Id_Usuario)
+REFERENCES Usuarios (Id_Usuario)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+Create table Detalle_Venta (Id_Venta int PRIMARY KEY AUTO_INCREMENT,
+Id_Compra int NOT NULL,
+Id_Producto int NOT NULL,
+Cantidad int NOT NULL);
+
+ALTER TABLE Detalle_Venta
+ADD FOREIGN KEY (Id_Compra)
+REFERENCES Compra (Id_Compra)
+ON DELETE CASCADE
+ON UPDATE CASCADE,
+ADD FOREIGN KEY (Id_Producto)
+REFERENCES Productos (Id_Producto)
+ON DELETE CASCADE
+ON UPDATE CASCADE;
+
+
+DELIMITER //
+CREATE TRIGGER iniciar_sesion
+AFTER INSERT ON Usuarios
+FOR EACH ROW 
+BEGIN
+	update Sesion_Usuario set Sesion = 0 where sesion = 1;
+	insert into Sesion_Usuario (Id_Usuario, Sesion) values (new.Id_Usuario, 1);
+END; //
+DELIMITER ; //
+
+DELIMITER //
+CREATE TRIGGER validar_usuario
+BEFORE INSERT ON Usuarios
+FOR EACH ROW 
+BEGIN
+	declare num_usrs int;
+	declare num_tels int;
+	select count(Usuario) into num_usrs from Usuarios where Usuario = new.Usuario;
+	select count(No_Telefono) into num_tels from Usuarios where No_Telefono = new.No_Telefono;
+
+	if num_usrs > 0 then
+		SIGNAL SQLSTATE '45001' SET MESSAGE_TEXT = "Este nombre de Usuario ya fue registrado";
+	elseif num_tels > 0 then
+		SIGNAL SQLSTATE '45001' SET MESSAGE_TEXT = "Este telefono ya fue registrado por otro Usuario";
+	end if;
+END; //
+DELIMITER ; //
+
+SELECT * FROM Categorias;
+SELECT * FROM Productos;
+SELECT * FROM Usuarios;
+SELECT * FROM Metodo_de_Pago;
+SELECT * FROM Compra;
+SELECT * FROM Detalle_Venta;
+
+drop database RetroStore;
