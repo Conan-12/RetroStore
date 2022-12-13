@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B864A80C-4AB0-4611-A569-739FBE1C3BC2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RetroStoreEsc</RootNamespace>
+    <AssemblyName>RetroStoreEsc</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.21.11.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.21.11\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.16.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.16\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.16.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.16\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Modelos\LlenarBD.cs" />
+    <Compile Include="Servicios\ServiceCategorias.cs" />
+    <Compile Include="Servicios\ServiceCompra.cs" />
+    <Compile Include="Servicios\ServiceProductos.cs" />
+    <Compile Include="Servicios\ServiceUsuarios.cs" />
+    <Compile Include="Servicios\Service_Detalle_Venta.cs" />
+    <Compile Include="Servicios\Service_Metodo_de_Pago.cs" />
+    <Compile Include="TiendaDigitalDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaDigitalDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TiendaDigitalDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TiendaDigitalDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Carrito.xaml.cs">
+      <DependentUpon>Carrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\IngresarDomicilio.xaml.cs">
+      <DependentUpon>IngresarDomicilio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\IngresarMetodoPago.xaml.cs">
+      <DependentUpon>IngresarMetodoPago.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\listaCompra.xaml.cs">
+      <DependentUpon>listaCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ObjetoCategoria.xaml.cs">
+      <DependentUpon>ObjetoCategoria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ObjetoItemCarrito.xaml.cs">
+      <DependentUpon>ObjetoItemCarrito.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ObjetoProductoDeUnaCategoria.xaml.cs">
+      <DependentUpon>ObjetoProductoDeUnaCategoria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Registro.xaml.cs">
+      <DependentUpon>Registro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ticket.xaml.cs">
+      <DependentUpon>Ticket.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Ventana-Productos-Categoria.xaml.cs">
+      <DependentUpon>Ventana-Productos-Categoria.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\VentanaCategorias.xaml.cs">
+      <DependentUpon>VentanaCategorias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\ViewProducto.xaml.cs">
+      <DependentUpon>ViewProducto.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Vistas\Carrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\IngresarDomicilio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\IngresarMetodoPago.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\listaCompra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\ObjetoCategoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\ObjetoItemCarrito.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\ObjetoProductoDeUnaCategoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Registro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Ticket.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Ventana-Productos-Categoria.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\VentanaCategorias.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\ViewProducto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelos\Categorias.cs" />
+    <Compile Include="Modelos\Compra.cs" />
+    <Compile Include="Modelos\Constantes.cs" />
+    <Compile Include="Modelos\Detalle_Venta.cs" />
+    <Compile Include="Modelos\Metodo_de_Pago.cs" />
+    <Compile Include="Modelos\MostrarProducto.cs" />
+    <Compile Include="Modelos\Productos.cs" />
+    <Compile Include="Modelos\Usuarios.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="TiendaDigitalDataSet1.xsc">
+      <DependentUpon>TiendaDigitalDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaDigitalDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TiendaDigitalDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TiendaDigitalDataSet1.xss">
+      <DependentUpon>TiendaDigitalDataSet1.xsd</DependentUpon>
+    </None>
+    <Resource Include="Imagenes\Logos\RetroStoreLogoGris.png" />
+    <Resource Include="Imagenes\Almacenamiento\Disco_Duro_Interno_Seagate_Barracuda_2TB.png" />
+    <Resource Include="Imagenes\Almacenamiento\SSD_Adata_Ultimate_SU630_QLC_3D.png" />
+    <Resource Include="Imagenes\Almacenamiento\SSD_AORUS_RGB.png" />
+    <Resource Include="Imagenes\Almacenamiento\SSD_XPG_Spectrix_S40G.png" />
+    <Resource Include="Imagenes\Fuentes de Poder\Aerocool_Cylon_700_80_PLUS_Bronze.png" />
+    <Resource Include="Imagenes\Fuentes de Poder\Corsair_Modular_CX750M_80_PLUS_Bronze.png" />
+    <Resource Include="Imagenes\Fuentes de Poder\Gigabyte_P550B_80_PLUS_Bronze.png" />
+    <Resource Include="Imagenes\Fuentes de Poder\Gigabyte_P750GM_80_PLUS_Gold.png" />
+    <Resource Include="Imagenes\Gabinetes\AerocoolQuantum.png" />
+    <Resource Include="Imagenes\Gabinetes\GabineteAORUSC300GLASS.png" />
+    <Resource Include="Imagenes\Gabinetes\GigabyteC200.png" />
+    <Resource Include="Imagenes\Gabinetes\ThermaltakeDivider300TGARGB.png" />
+    <Resource Include="Imagenes\Gabinetes\YeyianArmageddon2200MOD.png" />
+    <Resource Include="Imagenes\Gabinetes\YeyianKalt1101.jpg" />
+    <Resource Include="Imagenes\Memoria RAM\Trident_z_rgb_ddr4.png" />
+    <Resource Include="Imagenes\Memoria RAM\Vengeance_RGB_Pro_DDR4.png" />
+    <Resource Include="Imagenes\Memoria RAM\XPG_SPECTRIX_D50_RGB_Tungsten_Grey_DDR4.png" />
+    <Resource Include="Imagenes\Memoria RAM\XPG_Spectrix_D60G_DDR4.png" />
+    <Resource Include="Imagenes\Monitores\Monitor_Gamer_AORUS_FV43U_LCD_43.png" />
+    <Resource Include="Imagenes\Monitores\Monitor_Gamer_MSI_Optix_G241_LED.png" />
+    <Resource Include="Imagenes\Monitores\Monitor_Samsung_LF24T350FHLXZX_LED_24.png" />
+    <Resource Include="Imagenes\Perifericos\Mouse_Gamer_Logitech_Optico_G203_LightSync.png" />
+    <Resource Include="Imagenes\Perifericos\Mouse_Logitech_Optico_M280.png" />
+    <Resource Include="Imagenes\Perifericos\Teclado_Gamer_Corsair_K55_RGB_PRO.png" />
+    <Resource Include="Imagenes\Perifericos\Teclado_Gamer_Ocelot_Gaming_OGMK02_RGB.png" />
+    <Resource Include="Imagenes\Procesadores\AMD_Ryzen_5_5600G_con_Graficos_Radeon_7.png" />
+    <Resource Include="Imagenes\Procesadores\AMD_Ryzen_5_5600X.png" />
+    <Resource Include="Imagenes\Procesadores\AMD_Ryzen_7_5700G.png" />
+    <Resource Include="Imagenes\Procesadores\Intel_Core_i5_10400F.png" />
+    <Resource Include="Imagenes\Procesadores\Intel_Core_i7_12700F.png" />
+    <Resource Include="Imagenes\Procesadores\Intel_Core_i9_12900K_Intel_UHD_Graphics_770.png" />
+    <Resource Include="Imagenes\Refrigeracion\Aerocool_Mirage_L240.png" />
+    <Resource Include="Imagenes\Refrigeracion\Disipador_CPU_Vetroo_V5.jpg" />
+    <Resource Include="Imagenes\Refrigeracion\Gigabyte_AORUS_ATC800_RGB.jpg" />
+    <Resource Include="Imagenes\Refrigeracion\WATERFORCE_X_240.png" />
+    <Resource Include="Imagenes\Tarjetas de Video\ASUS_AMD_Radeon_RX_6600_8GB.png" />
+    <Resource Include="Imagenes\Tarjetas de Video\ASUS_NVIDIA_ROG_Strix_GeForce_RTX_3050_OC_Gaming.png" />
+    <Resource Include="Imagenes\Tarjetas de Video\EVGA_NVIDIA_GeForce_RTX_3090_FTW3_Ultra_Gaming.png" />
+    <Resource Include="Imagenes\Tarjetas de Video\MSI_NVIDIA_GeForce_GTX_1660_SUPER_VENTUS_XS_OC.png" />
+    <Resource Include="Imagenes\Tarjetas de Video\NVIDIA_GeForce_GT_730_Rev_3.png" />
+    <Resource Include="Imagenes\Tarjetas Madre\AORUS_ATX_B450_Elite_V2.png" />
+    <Resource Include="Imagenes\Tarjetas Madre\ASUS_ATX_ROG_STRIX_B550_F_GAMING.png" />
+    <Resource Include="Imagenes\Tarjetas Madre\ASUS_ATX_TUF_Gaming_B550_PLUS_WIFI_II.png" />
+    <Resource Include="Imagenes\Tarjetas Madre\Gigabyte_ATX_B550_Gaming_X.png" />
+    <Resource Include="Imagenes\Tarjetas Madre\MSI_ATX_MPG_B550_GAMING_PLUS.png" />
+    <Resource Include="Imagenes\Categorias\Almacenamiento.png" />
+    <Resource Include="Imagenes\Categorias\FuentesdePoder.png" />
+    <Resource Include="Imagenes\Categorias\MemoriaRAM.png" />
+    <Resource Include="Imagenes\Categorias\Monitores.png" />
+    <Resource Include="Imagenes\Categorias\Perifericos.png" />
+    <Resource Include="Imagenes\Categorias\Procesadores.png" />
+    <Resource Include="Imagenes\Categorias\Refrigeracion.png" />
+    <Resource Include="Imagenes\Categorias\TarjetasdeVideo.png" />
+    <Resource Include="Imagenes\Categorias\CategoriaTarjetasMadre.png" />
+    <Resource Include="Imagenes\Categorias\Gabinetes.png" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Fuentes\Shotgun.ttf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TiendaDigitalDataSet.xsc">
+      <DependentUpon>TiendaDigitalDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TiendaDigitalDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TiendaDigitalDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TiendaDigitalDataSet.xss">
+      <DependentUpon>TiendaDigitalDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Imagenes\Logos\365-3657595_moe-shop-anime-girl-anime-summer-anime-music-moe-shop-moe-moe.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

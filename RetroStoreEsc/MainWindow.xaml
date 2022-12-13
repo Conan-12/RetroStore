@@ -1,0 +1,81 @@
+﻿<Window x:Class="RetroStoreEsc.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RetroStoreEsc"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1366">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <DockPanel x:Name="menuSuperior" Background="#FF8E5DAE" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="8" Grid.RowSpan="1">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Button Content="≡" FontSize="42" Grid.Column="0" Grid.Row="0"
+                        Grid.ColumnSpan="1" Grid.RowSpan="1" Click="Button_Click"/>
+
+                <Button Content="Retro Store" FontSize="55"
+                       Grid.Column="1" Grid.Row="0"
+                       Grid.ColumnSpan="3" Grid.RowSpan="1" FontFamily="Shotgun" 
+                       HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click_2" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
+
+            </Grid>
+        </DockPanel>
+
+        <ContentControl
+                        Grid.Column="0" Grid.Row="1"
+                        Grid.ColumnSpan="8" Grid.RowSpan="8">
+            <ScrollViewer x:Name="Contenido" VerticalScrollBarVisibility="Auto">
+                
+            </ScrollViewer>
+        </ContentControl>
+
+        <DockPanel x:Name="Barra" Background="#FFCBB7FF" Grid.Row="1" Grid.Column="0" Grid.RowSpan="8" Visibility="Hidden">
+            <StackPanel>
+                <Button x:Name="btnCarrito" Content="Carrito" Height="50" Click="btnCarrito_Click"/>
+                <Button x:Name="btnCerrarSesion" Content="Cerrar Sesion" Height="50" Click="btnCerrarSesion_Click"/>
+                <Button x:Name="btnRegistrarse" Content="Registrarse" Height="50" Click="Button_Click_1"/>
+                <Button x:Name="btnIniSesion" Content="Iniciar Sesion" Height="50" Click="btnIniSesion_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+    </Grid>
+
+</Window>

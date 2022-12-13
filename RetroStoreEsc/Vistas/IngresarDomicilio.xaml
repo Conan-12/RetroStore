@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="RetroStoreEsc.Vistas.IngresarDomicilio"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RetroStoreEsc.Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="668.48" d:DesignWidth="1366">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="1" Grid.Row="0" Fill="#FF8489ED" 
+                   Margin="0, 20, 0, 0" RadiusX="20" RadiusY="21"/>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="1" Source="/Imagenes/Logos/365-3657595_moe-shop-anime-girl-anime-summer-anime-music-moe-shop-moe-moe.png">
+                <Image.OpacityMask>
+                    <ImageBrush ImageSource="/Imagenes/Logos/365-3657595_moe-shop-anime-girl-anime-summer-anime-music-moe-shop-moe-moe.png" Stretch="UniformToFill"/>
+                </Image.OpacityMask>
+            </Image>
+
+            <Label Content="Domicilio" FontSize="32" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Shotgun" Foreground="#FF252222"/>
+
+            <TextBox x:Name="txtDireccion" Grid.Row="3" Text="Direccion" FontSize="24" Height="44" Width="430"/>
+            <TextBox x:Name="txtCP" Grid.Row="5" Text="Codigo Postal" FontSize="24" Height="44" Width="430"/>
+
+            <Button Content="Registrar" Grid.Row="7" FontSize="24" Height="44" Width="430" Click="Button_Click"/>
+
+        </Grid>
+    </Grid>
+</UserControl>

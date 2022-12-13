@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="RetroStoreEsc.Vistas.ViewProducto"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RetroStoreEsc.Vistas"
+             mc:Ignorable="d" 
+             d:DesignHeight="668.48" d:DesignWidth="1366">
+    <Grid Height="672">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="445.65"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Image x:Name="picProducto" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="2" Stretch="UniformToFill"/>
+        <Label Grid.Column="1" Content="Label" HorizontalAlignment="Left" Height="58" 
+               Margin="30,24,0,0" VerticalAlignment="Top" Width="812"
+               FontSize="42" x:Name="txtModelo"/>
+
+        <Label Grid.Column="1" Content="Label" HorizontalAlignment="Left" Height="54" 
+               Margin="30,94,0,0" VerticalAlignment="Top" Width="812"
+               FontSize="28" x:Name="txtMarca"/>
+
+        <Label Grid.Column="1" Content="Label" HorizontalAlignment="Left" Height="54" 
+            Margin="30,147,0,0" VerticalAlignment="Top" Width="812"
+            FontSize="28" Name="txtPrecio"/>
+
+        <Label Grid.Column="1" HorizontalAlignment="Left" Height="126" 
+            Margin="30,206,0,0" VerticalAlignment="Top" Width="812"
+            FontSize="28" Grid.RowSpan="2">
+
+            <TextBlock x:Name="txtDescripcion" TextWrapping="WrapWithOverflow"/>
+
+        </Label>
+
+        <Label HorizontalAlignment="Left" Height="180" 
+            Margin="28,0,0,0" VerticalAlignment="Center" Width="1260"
+            FontSize="28" Grid.Row="2" Grid.ColumnSpan="2">
+
+            <TextBlock x:Name="txtCaracteristicas" TextWrapping="WrapWithOverflow"/>
+
+        </Label>
+
+        <Slider x:Name="slider" Grid.Column="1" HorizontalAlignment="Left" Margin="30,122,0,0" Grid.Row="1" VerticalAlignment="Top" Width="364" Height="30" ValueChanged="slider_ValueChanged"/>
+
+        <Label Grid.Column="1" Content="Cantidad: " HorizontalAlignment="Left" Height="73" 
+            Margin="30,163,0,0" VerticalAlignment="Top" Width="364"
+            FontSize="28" Grid.Row="1" x:Name="txtCantidad" Grid.RowSpan="2"/>
+
+        <Button x:Name="btnAgregar" Grid.Column="1" FontSize="28" Content="Agregar al Carrito" HorizontalAlignment="Left" Height="66" Margin="460,147,0,0" Grid.Row="1" VerticalAlignment="Top" Width="263" Click="Button_Click"/>
+
+    </Grid>
+</UserControl>

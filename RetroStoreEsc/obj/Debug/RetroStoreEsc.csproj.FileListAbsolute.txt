@@ -1,0 +1,152 @@
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\bin\Debug\RetroStoreEsc.exe.config
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\bin\Debug\RetroStoreEsc.exe
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\bin\Debug\RetroStoreEsc.pdb
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.AssemblyReference.cache
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.SuggestedBindingRedirects.cache
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\MainWindow.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\App.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc_MarkupCompile.cache
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc_MarkupCompile.lref
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\MainWindow.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.g.resources
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.Properties.Resources.resources
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.GenerateResource.cache
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.CoreCompileInputs.cache
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.exe
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.pdb
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc_Content.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Login.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Login.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoCategoria.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoCategoria.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ventana-Productos-Categoria.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\VentanaCategorias.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ventana-Productos-Categoria.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\VentanaCategorias.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoProductoDeUnaCategoria.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoProductoDeUnaCategoria.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ViewProducto.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ViewProducto.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Registro.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Registro.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Carrito.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoItemCarrito.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Carrito.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoItemCarrito.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarDomicilio.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarMetodoPago.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\listaCompra.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ticket.g.cs
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarDomicilio.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarMetodoPago.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\listaCompra.baml
+C:\Users\Chedraui\source\repos\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ticket.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\bin\Debug\RetroStoreEsc.exe.config
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\bin\Debug\RetroStoreEsc.exe
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\bin\Debug\RetroStoreEsc.pdb
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.AssemblyReference.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.SuggestedBindingRedirects.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\MainWindow.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Carrito.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarDomicilio.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarMetodoPago.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\listaCompra.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Login.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoCategoria.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoItemCarrito.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoProductoDeUnaCategoria.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Registro.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ticket.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ventana-Productos-Categoria.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\VentanaCategorias.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ViewProducto.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\App.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc_Content.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc_MarkupCompile.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc_MarkupCompile.lref
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\MainWindow.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Carrito.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarDomicilio.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\IngresarMetodoPago.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\listaCompra.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Login.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoCategoria.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoItemCarrito.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ObjetoProductoDeUnaCategoria.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Registro.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ticket.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\Ventana-Productos-Categoria.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\VentanaCategorias.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\Vistas\ViewProducto.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.g.resources
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.Properties.Resources.resources
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.GenerateResource.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.CoreCompileInputs.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.exe
+C:\Users\yosoy\Downloads\RetroStoreEsc\RetroStoreEsc\obj\Debug\RetroStoreEsc.pdb
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.AssemblyReference.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.SuggestedBindingRedirects.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\MainWindow.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Carrito.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\IngresarDomicilio.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\IngresarMetodoPago.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\listaCompra.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Login.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ObjetoCategoria.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ObjetoItemCarrito.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ObjetoProductoDeUnaCategoria.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Registro.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Ticket.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Ventana-Productos-Categoria.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\VentanaCategorias.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ViewProducto.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\App.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc_Content.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc_MarkupCompile.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc_MarkupCompile.lref
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.exe
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.pdb
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\RetroStoreEsc.exe.config
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\RetroStoreEsc.exe
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\RetroStoreEsc.pdb
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\Google.Protobuf.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\MySql.Data.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Buffers.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Memory.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\ZstdNet.dll
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\Google.Protobuf.pdb
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\Google.Protobuf.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\MySql.Data.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Buffers.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Memory.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\MainWindow.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Carrito.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\IngresarDomicilio.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\IngresarMetodoPago.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\listaCompra.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Login.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ObjetoCategoria.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ObjetoItemCarrito.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ObjetoProductoDeUnaCategoria.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Registro.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Ticket.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Ventana-Productos-Categoria.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\VentanaCategorias.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\ViewProducto.baml
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.g.resources
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.Properties.Resources.resources
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.GenerateResource.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.CoreCompileInputs.cache
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.CopyComplete
