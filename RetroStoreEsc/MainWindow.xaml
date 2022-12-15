@@ -57,6 +57,7 @@
                        HorizontalAlignment="Left" VerticalAlignment="Center" Click="Button_Click_2" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}"/>
 
             </Grid>
+            <Image Width="100" Source="/Imagenes/Logos/365-3657595_moe-shop-anime-girl-anime-summer-anime-music-moe-shop-moe-moe.png"/>
         </DockPanel>
 
         <ContentControl

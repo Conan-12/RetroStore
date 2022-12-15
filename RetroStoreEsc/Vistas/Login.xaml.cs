@@ -50,8 +50,7 @@ namespace RetroStoreEsc.Vistas
                 }
                 else if (usuario.Contraseña == txtContraseña.Password)
                 {
-                    usuario.Sesion = 1;
-                    serviceUsuarios.Actualizar(usuario);
+                    serviceUsuarios.AbrirSesion(usuario.Id_Usuario);
                     pasar.Contenido.Content = new ViewCategorias(pasar);
                 }
                 else

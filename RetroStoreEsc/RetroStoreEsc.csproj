@@ -94,12 +94,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Modelos\LlenarBD.cs" />
+    <Compile Include="Modelos\Sesion_Usuario.cs" />
     <Compile Include="Servicios\ServiceCategorias.cs" />
     <Compile Include="Servicios\ServiceCompra.cs" />
     <Compile Include="Servicios\ServiceProductos.cs" />
     <Compile Include="Servicios\ServiceUsuarios.cs" />
     <Compile Include="Servicios\Service_Detalle_Venta.cs" />
     <Compile Include="Servicios\Service_Metodo_de_Pago.cs" />
+    <Compile Include="Servicios\Service_Sesion_Usuario.cs" />
     <Compile Include="TiendaDigitalDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

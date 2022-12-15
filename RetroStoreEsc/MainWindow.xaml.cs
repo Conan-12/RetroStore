@@ -64,8 +64,7 @@ namespace RetroStoreEsc
         {
             ServiceUsuarios serviceUsuarios = new ServiceUsuarios();
             Usuarios usuarioActivo = serviceUsuarios.SelectUsuarioActivo();
-            usuarioActivo.Sesion = 0;
-            serviceUsuarios.Actualizar(usuarioActivo);
+            serviceUsuarios.CerrarSesion();
             OcultarBotones();
             Barra.Visibility = Visibility.Collapsed;
         }

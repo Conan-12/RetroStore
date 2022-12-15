@@ -68,7 +68,7 @@ namespace RetroStoreEsc.Servicios
             {
                 if (this.AbrirConexion())
                 {
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Usuarios (nombre_Cliente, apellidos, usuario, contraseña, no_Telefono, fecha_Nac, sesion) VALUES (@nombre_Cliente, @apellidos, @usuario, @contraseña, @no_Telefono, @fecha_Nac, @sesion)", conexion);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Usuarios (nombre_Cliente, apellidos, usuario, contraseña, no_Telefono, fecha_Nac) VALUES (@nombre_Cliente, @apellidos, @usuario, @contraseña, @no_Telefono, @fecha_Nac)", conexion);
 
                     cmd.Parameters.AddWithValue("@nombre_Cliente", usuario.Nombre_Cliente);
                     cmd.Parameters.AddWithValue("@apellidos", usuario.Apellidos);
@@ -76,7 +76,6 @@ namespace RetroStoreEsc.Servicios
                     cmd.Parameters.AddWithValue("@contraseña", usuario.Contraseña);
                     cmd.Parameters.AddWithValue("@no_Telefono", usuario.No_Telefono);
                     cmd.Parameters.AddWithValue("@fecha_Nac", usuario.Fecha_Nac);
-                    cmd.Parameters.AddWithValue("@sesion", usuario.Sesion);
 
                     cmd.ExecuteNonQuery();
                     this.CerrarConexion();
@@ -109,7 +108,6 @@ namespace RetroStoreEsc.Servicios
                     cmd.Parameters.AddWithValue("@contraseña", usuario.Contraseña);
                     cmd.Parameters.AddWithValue("@no_Telefono", usuario.No_Telefono);
                     cmd.Parameters.AddWithValue("@fecha_Nac", usuario.Fecha_Nac);
-                    cmd.Parameters.AddWithValue("@sesion", usuario.Sesion);
 
                     cmd.ExecuteNonQuery();
                     this.CerrarConexion();
@@ -147,7 +145,6 @@ namespace RetroStoreEsc.Servicios
                     usuario.Contraseña = Convert.ToString(dataReader["Contraseña"]);
                     usuario.No_Telefono = Convert.ToString(dataReader["No_Telefono"]);
                     usuario.Fecha_Nac = Convert.ToDateTime(dataReader["Fecha_Nac"]);
-                    usuario.Sesion = Convert.ToByte(dataReader["Sesion"]);
 
                     dataReader.Close();
                 }
@@ -173,7 +170,7 @@ namespace RetroStoreEsc.Servicios
 
         public Usuarios SelectUsuarioActivo()
         {
-            string query = "select * from Usuarios where Sesion = 1";
+            string query = "select Usuarios.Id_Usuario, Nombre_Cliente, Apellidos, Usuario, Contraseña, No_Telefono, Fecha_Nac from Usuarios, Sesion_Usuario where Sesion = 1";
 
             if (this.AbrirConexion())
             {
@@ -191,7 +188,6 @@ namespace RetroStoreEsc.Servicios
                     usuario.Contraseña = Convert.ToString(dataReader["Contraseña"]);
                     usuario.No_Telefono = Convert.ToString(dataReader["No_Telefono"]);
                     usuario.Fecha_Nac = Convert.ToDateTime(dataReader["Fecha_Nac"]);
-                    usuario.Sesion = Convert.ToByte(dataReader["Sesion"]);
 
                     dataReader.Close();
                 }
@@ -236,7 +232,6 @@ namespace RetroStoreEsc.Servicios
                         usuario.Contraseña = Convert.ToString(dataReader["Contraseña"]);
                         usuario.No_Telefono = Convert.ToString(dataReader["No_Telefono"]);
                         usuario.Fecha_Nac = Convert.ToDateTime(dataReader["Fecha_Nac"]);
-                        usuario.Sesion = Convert.ToByte(dataReader["Sesion"]);
 
                         lista.Add(usuario);
                     }
@@ -259,6 +254,44 @@ namespace RetroStoreEsc.Servicios
             else
             {
                 return null;
+            }
+        }
+
+        public void CerrarSesion()
+        {
+            try
+            {
+                if (this.AbrirConexion())
+                {
+                    MySqlCommand cmd = new MySqlCommand("call cerrar_sesion();", conexion);
+
+                    cmd.ExecuteNonQuery();
+                    this.CerrarConexion();
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void AbrirSesion(int id)
+        {
+            try
+            {
+                if (this.AbrirConexion())
+                {
+                    MySqlCommand cmd = new MySqlCommand("call abrir_sesion(" + id.ToString() + ");", conexion);
+
+                    cmd.ExecuteNonQuery();
+                    this.CerrarConexion();
+
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 

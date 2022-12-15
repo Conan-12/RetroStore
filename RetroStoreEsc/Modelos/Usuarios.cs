@@ -15,6 +15,5 @@ namespace RetroStoreEsc.Modelos
         public string Contraseña { get; set; }
         public string No_Telefono { get; set; }
         public DateTime Fecha_Nac { get; set; }
-        public byte Sesion { get; set; }
     }
 }

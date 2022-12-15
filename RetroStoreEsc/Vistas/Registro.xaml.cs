@@ -38,15 +38,7 @@ namespace RetroStoreEsc.Vistas
                 && !string.IsNullOrEmpty(txtUsuario.Text)
                 && !string.IsNullOrEmpty(txtContraseña.Password))
             {
-                if (CompararUserName(serviceUsuarios.Select(), txtUsuario.Text))
-                {
-                    MessageBox.Show("Registrando...\nEste nombre de usuario ya esta registrado, elije otro");
-                }
-                else if (CompararTelefono(serviceUsuarios.Select(), txtNum.Text))
-                {
-                    MessageBox.Show("Registrando...\nEste numero de telefono ya esta registrado, elije otro");
-                }
-                else if (txtNum.Text.Count() > 10)
+                if (txtNum.Text.Count() > 10)
                 {
                     MessageBox.Show("Registrando...\nUn numero de telefono no puede tener mas de 10 digitos, digite un numero valido");
                 }
@@ -60,55 +52,22 @@ namespace RetroStoreEsc.Vistas
                     infousuarios.Contraseña = txtContraseña.Password;
                     infousuarios.No_Telefono = txtNum.Text;
                     infousuarios.Fecha_Nac = Convert.ToDateTime(txtFecha.Text);
-                    infousuarios.Sesion = 1;
 
                     List<Usuarios> lista = serviceUsuarios.Select();
-                    if (lista.Count == 0)
+
+                    if (serviceUsuarios.Insertar(infousuarios))
                     {
-                        infousuarios.Id_Usuario = 1;
+                        pasar.btnIniSesion.Visibility = Visibility.Hidden;
+                        pasar.btnRegistrarse.Visibility = Visibility.Hidden;
+
+                        pasar.Contenido.Content = new ViewCategorias(pasar);
                     }
-                    else
-                    {
-                        infousuarios.Id_Usuario = lista[lista.Count - 1].Id_Usuario + 1;
-                    }
-
-                    serviceUsuarios.Insertar(infousuarios);
-
-                    pasar.btnIniSesion.Visibility = Visibility.Hidden;
-                    pasar.btnRegistrarse.Visibility = Visibility.Hidden;
-
-                    pasar.Contenido.Content = new ViewCategorias(pasar);
+                    
                 }
             }
         }
-        public static bool CompararUserName(List<Usuarios> usuarios, string username)
-        {
-            bool find = false;
 
-            foreach (Usuarios usuario in usuarios)
-            {
-                if (usuario.Usuario == username)
-                {
-                    find = true;
-                }
-            }
-
-            return find;
-        }
-        public static bool CompararTelefono(List<Usuarios> usuarios, string telefono)
-        {
-            bool find = false;
-
-            foreach (Usuarios usuario in usuarios)
-            {
-                if (usuario.No_Telefono == telefono)
-                {
-                    find = true;
-                }
-            }
-
-            return find;
-        }
+        #region Limpiar TextBoxes
 
         private void txtNombre_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
@@ -141,5 +100,7 @@ namespace RetroStoreEsc.Vistas
                 txtNum.Clear();
             }
         }
+
+        #endregion
     }
 }
