@@ -129,6 +129,7 @@ namespace RetroStoreEsc.Servicios
         {
             string query = "select * from Usuarios where Usuario = '";
             query += userName + "'";
+
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
@@ -170,12 +171,15 @@ namespace RetroStoreEsc.Servicios
 
         public Usuarios SelectUsuarioActivo()
         {
-            string query = "select Usuarios.Id_Usuario, Nombre_Cliente, Apellidos, Usuario, Contraseña, No_Telefono, Fecha_Nac from Usuarios, Sesion_Usuario where Sesion = 1";
+            string query = "select Usuarios.Id_Usuario, Nombre_Cliente, Apellidos," +
+                "Usuario, Contraseña, No_Telefono, Fecha_Nac from Usuarios," +
+                "Sesion_Usuario where Sesion = 1";
 
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
                 Usuarios usuario = new Usuarios();
+
                 try
                 {
                     MySqlDataReader dataReader = cmd.ExecuteReader();
@@ -215,6 +219,7 @@ namespace RetroStoreEsc.Servicios
         {
             string query = "SELECT * FROM Usuarios";
             List<Usuarios> lista = new List<Usuarios>();
+
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
@@ -282,7 +287,8 @@ namespace RetroStoreEsc.Servicios
             {
                 if (this.AbrirConexion())
                 {
-                    MySqlCommand cmd = new MySqlCommand("call abrir_sesion(" + id.ToString() + ");", conexion);
+                    MySqlCommand cmd = new MySqlCommand("call iniciar_sesion(" +
+                        id.ToString() + ");", conexion);
 
                     cmd.ExecuteNonQuery();
                     this.CerrarConexion();

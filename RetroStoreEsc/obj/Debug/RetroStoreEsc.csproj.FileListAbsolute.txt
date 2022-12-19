@@ -150,3 +150,5 @@ C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStor
 C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.GenerateResource.cache
 C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.CoreCompileInputs.cache
 C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\RetroStoreEsc.csproj.CopyComplete
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Buscar2.g.cs
+C:\Users\yosoy\Downloads\RetroStoreEsc - copia\RetroStoreEsc\obj\Debug\Vistas\Buscar2.baml

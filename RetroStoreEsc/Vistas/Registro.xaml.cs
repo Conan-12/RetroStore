@@ -38,7 +38,7 @@ namespace RetroStoreEsc.Vistas
                 && !string.IsNullOrEmpty(txtUsuario.Text)
                 && !string.IsNullOrEmpty(txtContraseña.Password))
             {
-                if (txtNum.Text.Count() > 10)
+                if (QuitarFormatoNum(txtNum.Text).Count() > 10)
                 {
                     MessageBox.Show("Registrando...\nUn numero de telefono no puede tener mas de 10 digitos, digite un numero valido");
                 }
@@ -50,7 +50,7 @@ namespace RetroStoreEsc.Vistas
                     infousuarios.Apellidos = txtApellidos.Text;
                     infousuarios.Usuario = txtUsuario.Text;
                     infousuarios.Contraseña = txtContraseña.Password;
-                    infousuarios.No_Telefono = txtNum.Text;
+                    infousuarios.No_Telefono = QuitarFormatoNum(txtNum.Text);
                     infousuarios.Fecha_Nac = Convert.ToDateTime(txtFecha.Text);
 
                     List<Usuarios> lista = serviceUsuarios.Select();
@@ -59,6 +59,7 @@ namespace RetroStoreEsc.Vistas
                     {
                         pasar.btnIniSesion.Visibility = Visibility.Hidden;
                         pasar.btnRegistrarse.Visibility = Visibility.Hidden;
+                        pasar.btnCerrarSesion.Visibility = Visibility.Visible;
 
                         pasar.Contenido.Content = new ViewCategorias(pasar);
                     }
@@ -71,36 +72,62 @@ namespace RetroStoreEsc.Vistas
 
         private void txtNombre_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (txtNombre.Text.Equals("Nombre") || string.IsNullOrEmpty(txtNombre.Text))
-            {
-                txtNombre.Clear();
-            }
+            MostrarOcultarEtiquetas(txtNombre, lblNombre, "Nombre");          
         }
 
         private void txtApellidos_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (txtApellidos.Text.Equals("Apellidos") || string.IsNullOrEmpty(txtApellidos.Text))
-            {
-                txtApellidos.Clear();
-            }
+            MostrarOcultarEtiquetas(txtApellidos, lblApellidos, "Apellidos");
         }
 
         private void txtUsuario_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (txtUsuario.Text.Equals("Usuario") || string.IsNullOrEmpty(txtUsuario.Text))
-            {
-                txtUsuario.Clear();
-            }
+            MostrarOcultarEtiquetas(txtUsuario, lblUsuario, "Usuario");
         }
 
         private void txtNum_IsKeyboardFocusedChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (txtNum.Text.Equals("Numero de Telefono") || string.IsNullOrEmpty(txtNum.Text))
+            MostrarOcultarEtiquetas(txtNum, lblNum, "Numero de Telefono");
+        }
+
+        private void MostrarOcultarEtiquetas(TextBox textBox, Label label, string str)
+        {
+            if (textBox.Text.Equals(str))
             {
-                txtNum.Clear();
+                textBox.Clear();
+                label.Visibility = Visibility.Visible;
+            }
+            else if (string.IsNullOrEmpty(textBox.Text) || string.IsNullOrWhiteSpace(textBox.Text))
+            {
+                textBox.Text = str;
+                label.Visibility = Visibility.Hidden;
             }
         }
 
         #endregion
+
+        private string QuitarFormatoNum(string f_Num)
+        {
+            string nf_num = "";
+
+            foreach (char c in f_Num)
+            {
+                if (!c.Equals('-'))
+                    nf_num += c;
+            }
+
+            return nf_num;
+        }
+
+        private void txtNum_KeyDown(object sender, KeyEventArgs e)
+        {
+            int length = txtNum.Text.Length;
+
+            if ((length == 3 || length == 7) && true)
+            {
+                txtNum.AppendText("-");
+                txtNum.CaretIndex = txtNum.Text.Length;
+            }
+        }
     }
 }

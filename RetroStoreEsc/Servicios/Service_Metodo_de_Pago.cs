@@ -22,7 +22,10 @@ namespace RetroStoreEsc.Servicios
         public Service_Metodo_de_Pago()
         {
             conexion = new MySqlConnection();
-            conexion.ConnectionString = "server=" + server + ";database=" + database + ";Uid=" + user + ";pwd=" + password + ";";
+
+            conexion.ConnectionString = "server=" + server + ";database="
+                + database + ";Uid=" + user + ";pwd=" + password + ";";
+
         }
 
         private bool AbrirConexion()
@@ -127,6 +130,7 @@ namespace RetroStoreEsc.Servicios
         {
             string query = "SELECT * FROM Metodo_de_Pago";
             List<Metodo_de_Pago> lista = new List<Metodo_de_Pago>();
+
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);

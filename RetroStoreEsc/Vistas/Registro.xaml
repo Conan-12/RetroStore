@@ -7,14 +7,22 @@
              mc:Ignorable="d" 
              d:DesignHeight="668.48" d:DesignWidth="1366">
     <Grid>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Column="1" Grid.Row="0" Fill="#FF232F3E" 
-                   Margin="0, 20, 0, 0" RadiusX="20" RadiusY="21"/>
+        <Image Source="/Imagenes/Fondos/wallpaperbetter.com_1366x768 (1).jpg" 
+               Grid.ColumnSpan="3" Stretch="Uniform" />
+
+        <Rectangle Grid.Column="1" Grid.Row="0" 
+                   Margin="0, 20, 0, 0" RadiusX="20" RadiusY="21">
+            <Rectangle.Fill>
+                <SolidColorBrush Color="#FF232F3E" Opacity="0.6"/>
+            </Rectangle.Fill>
+        </Rectangle>
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -34,13 +42,27 @@
                 </Image.OpacityMask>
             </Image>
 
-            <TextBox x:Name="txtNombre" Grid.Row="1" Text="Nombre" FontSize="24" Height="44" Width="430" IsKeyboardFocusedChanged="txtNombre_IsKeyboardFocusedChanged"/>
-            <TextBox x:Name="txtApellidos" Grid.Row="2" Text="Apellidos" FontSize="24" Height="44" Width="430" IsKeyboardFocusedChanged="txtApellidos_IsKeyboardFocusedChanged"/>
-            <TextBox x:Name="txtUsuario" Grid.Row="3" Text="Usuario" FontSize="24" Height="44" Width="430" IsKeyboardFocusedChanged="txtUsuario_IsKeyboardFocusedChanged"/>
-            <PasswordBox x:Name="txtContraseña" Grid.Row="4" FontSize="24" Height="44" Width="430"/>
-            <TextBox x:Name="txtNum" Grid.Row="5" Text="Numero de Telefono" FontSize="24" Height="44" Width="430" IsKeyboardFocusedChanged="txtNum_IsKeyboardFocusedChanged"/>
-            <DatePicker Name="txtFecha" Grid.Row="6" FontSize="24" Height="44" Width="430"/>
-            <Button Content="Registrar" Grid.Row="7" FontSize="24" Height="44" Click="Button_Click" Width="430"/>
+            <TextBox x:Name="txtNombre" Grid.Row="1" Text="Nombre" IsKeyboardFocusedChanged="txtNombre_IsKeyboardFocusedChanged" Width="362" Height="24" FontFamily="Shotgun" FontSize="24" VerticalContentAlignment="Center" Margin="46,38,46,12"/>
+            <TextBox x:Name="txtApellidos" Grid.Row="2" Text="Apellidos" IsKeyboardFocusedChanged="txtApellidos_IsKeyboardFocusedChanged" FontFamily="Shotgun" FontSize="24" Margin="46,38,46,12" Width="362" Height="24" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="txtUsuario" Grid.Row="3" Text="Usuario" IsKeyboardFocusedChanged="txtUsuario_IsKeyboardFocusedChanged" FontFamily="Shotgun" FontSize="24" Margin="46,38,46,12" Width="362" Height="24" VerticalContentAlignment="Center"/>
+            <PasswordBox x:Name="txtContraseña" Grid.Row="4" FontFamily="Shotgun" FontSize="24" Margin="46,38,46,12" Width="362" Height="24" VerticalContentAlignment="Center"/>
+            <TextBox x:Name="txtNum" Grid.Row="5" Text="Numero de Telefono" IsKeyboardFocusedChanged="txtNum_IsKeyboardFocusedChanged" FontFamily="Shotgun" FontSize="24" 
+                     Margin="46,38,46,12" Width="362" Height="24" VerticalContentAlignment="Center" KeyDown="txtNum_KeyDown"/>
+            <DatePicker Name="txtFecha" Grid.Row="6" Margin="46,38,46,12" Width="362" Height="24"  VerticalContentAlignment="Center"/>
+            <Button Content="Registrar" Grid.Row="7" Click="Button_Click" Width="362" Margin="46,38,46,12"/>
+
+            <Label Name="lblNombre" Content="Nombre" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Width="109" FontSize="20
+                   " Foreground="#FFD6B6D0" Grid.Row="1" Visibility="Hidden"/>
+            <Label Name="lblApellidos" Content="Apellidos" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Width="109" FontSize="20
+                   " Foreground="#FFD6B6D0" Grid.Row="2" Visibility="Hidden"/>
+            <Label Name="lblUsuario" Content="Usuario" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Width="109" FontSize="20
+                   " Foreground="#FFD6B6D0" Grid.Row="3" Visibility="Hidden"/>
+            <Label Name="lblContraseña" Content="Contraseña" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Width="109" FontSize="20
+                   " Foreground="#FFD6B6D0" Grid.Row="4" Visibility="Visible"/>
+            <Label Name="lblNum" Content="Numero de Telefono" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Width="202" FontSize="20
+                   " Foreground="#FFD6B6D0" Grid.Row="5" Visibility="Hidden"/>
+            <Label Name="lblFecha" Content="Fecha de Nacimiento" HorizontalAlignment="Left" Margin="40,5,0,0" VerticalAlignment="Top" Width="202" FontSize="20
+                   " Foreground="#FFD6B6D0" Grid.Row="6" Visibility="Visible"/>
 
         </Grid>
 

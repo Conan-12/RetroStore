@@ -62,7 +62,7 @@ namespace RetroStoreEsc.Vistas
             nuevoItem.Id_Usuario = usuarioActivo.Id_Usuario;
             nuevoItem.Id_Producto = idLocal;
             nuevoItem.Cantidad = Convert.ToInt32(slider.Value);
-            nuevoItem.Id_Compra = 0;
+            nuevoItem.Id_Compra = 1;
 
             service_Detalle_Venta.Insertar(nuevoItem);
 

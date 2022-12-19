@@ -11,6 +11,7 @@ namespace RetroStoreEsc.Modelos
         public int Id_Compra { get; set; }
         public DateTime Fecha_Compra { get; set; }
         public string Direccion_Envio { get; set; }
-        public int CP_Envio { get; set; }
+        public string CP_Envio { get; set; }
+        public int Id_Usuario { get; set; }
     }
 }

@@ -165,10 +165,58 @@ namespace RetroStoreEsc.Servicios
             }
         }
 
-        public List<Detalle_Venta> SelectId(int id)
+        public List<Detalle_Venta> Select_Con_IdCompra(int id)
         {
             string query = "select * from Detalle_Venta where Id_Compra = ";
             query += id.ToString();
+
+            List<Detalle_Venta> lista = new List<Detalle_Venta>();
+            if (this.AbrirConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                try
+                {
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        Detalle_Venta detalle_Venta = new Detalle_Venta();
+
+                        detalle_Venta.Id_Venta = Convert.ToInt32(dataReader["Id_Venta"]);
+                        detalle_Venta.Id_Compra = Convert.ToInt32(dataReader["Id_Compra"]);
+                        detalle_Venta.Id_Producto = Convert.ToInt32(dataReader["Id_Producto"]);
+                        detalle_Venta.Cantidad = Convert.ToInt32(dataReader["Cantidad"]);
+                        detalle_Venta.Id_Usuario = Convert.ToInt32(dataReader["Id_Usuario"]);
+
+                        lista.Add(detalle_Venta);
+                    }
+                    dataReader.Close();
+                }
+                catch (MySqlException ex1)
+                {
+                    MessageBox.Show(ex1.Message);
+                    return null;
+                }
+                catch (Exception ex2)
+                {
+                    MessageBox.Show(ex2.StackTrace);
+                    MessageBox.Show(ex2.Message);
+                    return null;
+                }
+                this.CerrarConexion();
+                return lista;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<Detalle_Venta> DetallesVenta_Carrito_UsuarioActivo()
+        {
+            string query = "select DISTINCT Id_Venta, Id_Compra, Id_Producto, Cantidad, " +
+                "Detalle_venta.Id_Usuario from Detalle_venta, Usuarios, Sesion_Usuario " +
+                "where Sesion = 1 and Detalle_venta.Id_Usuario = Usuarios.Id_Usuario " +
+                "and Id_Compra = 1";
 
             List<Detalle_Venta> lista = new List<Detalle_Venta>();
             if (this.AbrirConexion())

@@ -52,6 +52,10 @@ namespace RetroStoreEsc.Vistas
                 {
                     serviceUsuarios.AbrirSesion(usuario.Id_Usuario);
                     pasar.Contenido.Content = new ViewCategorias(pasar);
+
+                    pasar.btnIniSesion.Visibility = Visibility.Hidden;
+                    pasar.btnRegistrarse.Visibility = Visibility.Hidden;
+                    pasar.btnCerrarSesion.Visibility = Visibility.Visible;
                 }
                 else
                 {

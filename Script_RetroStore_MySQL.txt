@@ -65,7 +65,8 @@ ON UPDATE CASCADE;
 Create table Detalle_Venta (Id_Venta int PRIMARY KEY AUTO_INCREMENT,
 Id_Compra int NOT NULL,
 Id_Producto int NOT NULL,
-Cantidad int NOT NULL);
+Cantidad int NOT NULL,
+Id_Usuario int NOT NULL);
 
 ALTER TABLE Detalle_Venta
 ADD FOREIGN KEY (Id_Compra)
@@ -75,42 +76,14 @@ ON UPDATE CASCADE,
 ADD FOREIGN KEY (Id_Producto)
 REFERENCES Productos (Id_Producto)
 ON DELETE CASCADE
+ON UPDATE CASCADE,
+ADD FOREIGN KEY (Id_Usuario)
+REFERENCES Usuarios (Id_Usuario)
+ON DELETE CASCADE
 ON UPDATE CASCADE;
 
 
-DELIMITER //
-CREATE TRIGGER iniciar_sesion
-AFTER INSERT ON Usuarios
-FOR EACH ROW 
-BEGIN
-	update Sesion_Usuario set Sesion = 0 where sesion = 1;
-	insert into Sesion_Usuario (Id_Usuario, Sesion) values (new.Id_Usuario, 1);
-END; //
-DELIMITER ; //
 
-DELIMITER //
-CREATE TRIGGER validar_usuario
-BEFORE INSERT ON Usuarios
-FOR EACH ROW 
-BEGIN
-	declare num_usrs int;
-	declare num_tels int;
-	select count(Usuario) into num_usrs from Usuarios where Usuario = new.Usuario;
-	select count(No_Telefono) into num_tels from Usuarios where No_Telefono = new.No_Telefono;
 
-	if num_usrs > 0 then
-		SIGNAL SQLSTATE '45001' SET MESSAGE_TEXT = "Este nombre de Usuario ya fue registrado";
-	elseif num_tels > 0 then
-		SIGNAL SQLSTATE '45001' SET MESSAGE_TEXT = "Este telefono ya fue registrado por otro Usuario";
-	end if;
-END; //
-DELIMITER ; //
 
-SELECT * FROM Categorias;
-SELECT * FROM Productos;
-SELECT * FROM Usuarios;
-SELECT * FROM Metodo_de_Pago;
-SELECT * FROM Compra;
-SELECT * FROM Detalle_Venta;
 
-drop database RetroStore;

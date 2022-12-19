@@ -113,8 +113,10 @@ namespace RetroStoreEsc.Servicios
 
         public List<Categorias> Select()
         {
+
             string query = "SELECT * FROM Categorias";
             List<Categorias> lista = new List<Categorias>();
+
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);

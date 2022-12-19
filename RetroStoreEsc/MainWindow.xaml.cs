@@ -93,5 +93,17 @@ namespace RetroStoreEsc
             Contenido.Content = new Carrito(this);
             Barra.Visibility = Visibility.Collapsed;
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Contenido.Content = new Buscar2();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            ServiceProductos serviceProductos = new ServiceProductos();
+            resultados.ItemsSource = serviceProductos.Buscar(busqueda.Text);
+            resultados.IsDropDownOpen = true;
+        }
     }
 }

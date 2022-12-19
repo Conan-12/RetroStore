@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:RetroStoreEsc.Vistas"
              mc:Ignorable="d" 
              d:DesignHeight="290.74" d:DesignWidth="233.2" Background="#FFFEF8F8">
+
     <Grid>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
             <RowDefinition/>
@@ -14,12 +16,15 @@
 
         <Label x:Name="txtNombreCategotia" FontSize="28" HorizontalContentAlignment="Center"
                Grid.Column="0" Grid.Row="0"/>
-        <Button x:Name="btnCategoria" Click="btnCategoria_Click"
-                Grid.Column="0" Grid.Row="1">
-            <Button.Background>
-                <ImageBrush x:Name="imagenBtn" Stretch="UniformToFill"/>
-            </Button.Background>
-        </Button>
 
+        <Button x:Name="btnCategoria" Click="btnCategoria_Click" 
+                Grid.Column="0" Grid.Row="1">
+
+            <Image x:Name="imagenBtn" Source="/Imagenes/Logos/365-3657595_moe-shop-anime-girl-anime-summer-anime-music-moe-shop-moe-moe.png" Stretch="UniformToFill"/>
+
+        </Button>
+        
     </Grid>
 </UserControl>
+    
+  

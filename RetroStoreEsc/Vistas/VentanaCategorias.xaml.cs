@@ -70,7 +70,7 @@ namespace RetroStoreEsc.Vistas
             {
                 ObjetoCategoria objetoCategoria = new ObjetoCategoria(pasar);
                 objetoCategoria.txtNombreCategotia.Content = categorias[i].Nombre_Categoria;
-                objetoCategoria.imagenBtn.ImageSource = recursos[categorias[i].Id_Categoria];
+                objetoCategoria.imagenBtn.Source = recursos[categorias[i].Id_Categoria];
                 objetoCategoria.id = categorias[i].Id_Categoria;
 
                 contents[i].Content = objetoCategoria;

@@ -112,6 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>TiendaDigitalDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Buscar2.xaml.cs">
+      <DependentUpon>Buscar2.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Carrito.xaml.cs">
       <DependentUpon>Carrito.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Vistas\Buscar2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\Carrito.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -219,10 +226,8 @@
   <ItemGroup>
     <Compile Include="Modelos\Categorias.cs" />
     <Compile Include="Modelos\Compra.cs" />
-    <Compile Include="Modelos\Constantes.cs" />
     <Compile Include="Modelos\Detalle_Venta.cs" />
     <Compile Include="Modelos\Metodo_de_Pago.cs" />
-    <Compile Include="Modelos\MostrarProducto.cs" />
     <Compile Include="Modelos\Productos.cs" />
     <Compile Include="Modelos\Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -238,6 +243,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="Imagenes\Fondos\wallpaperbetter.com_1366x768 %282%29.jpg" />
+    <Resource Include="Imagenes\Fondos\wallpaperbetter.com_1366x768 %283%29.jpg" />
+    <Resource Include="Imagenes\Fondos\wallpaperbetter.com_1366x768 %281%29.jpg" />
     <None Include="packages.config" />
     <None Include="TiendaDigitalDataSet1.xsc">
       <DependentUpon>TiendaDigitalDataSet1.xsd</DependentUpon>
@@ -310,6 +318,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="585e4adacb11b227491c3392.png" />
     <Content Include="Fuentes\Shotgun.ttf" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>

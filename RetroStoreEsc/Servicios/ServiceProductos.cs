@@ -133,6 +133,7 @@ namespace RetroStoreEsc.Servicios
         {
             string query = "SELECT * FROM Productos";
             List<Productos> lista = new List<Productos>();
+
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
@@ -180,6 +181,8 @@ namespace RetroStoreEsc.Servicios
         {
             string query = "select * from Productos where Id_Categoria = ";
             query += id.ToString();
+
+
             List<Productos> lista = new List<Productos>();
             if (this.AbrirConexion())
             {
@@ -228,6 +231,7 @@ namespace RetroStoreEsc.Servicios
         {
             string query = "select * from Productos where Id_Producto = ";
             query += id.ToString();
+
             if (this.AbrirConexion())
             {
                 MySqlCommand cmd = new MySqlCommand(query, conexion);
@@ -270,5 +274,92 @@ namespace RetroStoreEsc.Servicios
             }
         }
 
+        public List<ViewProductos> SelectAll()
+        {
+
+            string query = "SELECT * FROM productos JOIN categorias " +
+                "ON productos.Id_Categoria=categorias.Id_Categoria";
+
+            List<ViewProductos> lista = new List<ViewProductos>();
+            if (this.AbrirConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                try
+                {
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        ViewProductos producto = new ViewProductos();
+
+                        producto.Id_Producto = Convert.ToInt32(dataReader["Id_Producto"]);
+                        producto.Categoria = Convert.ToString(dataReader["Nombre_Categoria"]);
+                        producto.Marca = Convert.ToString(dataReader["Marca"]);
+                        producto.Modelo = Convert.ToString(dataReader["Modelo"]);
+                        producto.Descripcion = Convert.ToString(dataReader["Descripcion"]);
+                        producto.Caracteristicas = Convert.ToString(dataReader["Caracteristicas"]);
+                        producto.Precio = Convert.ToDecimal(dataReader["Precio"]);
+                        producto.Stock = Convert.ToInt32(dataReader["Stock"]);
+
+                        lista.Add(producto);
+                    }
+                    dataReader.Close();
+                }
+                catch (MySqlException ex1)
+                {
+                    MessageBox.Show(ex1.Message);
+                    return null;
+                }
+                catch (Exception ex2)
+                {
+                    MessageBox.Show(ex2.StackTrace);
+                    MessageBox.Show(ex2.Message);
+                    return null;
+                }
+                this.CerrarConexion();
+                return lista;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public List<string> Buscar(string busqueda)
+        {
+            string query = "SELECT Modelo FROM Productos WHERE Modelo LIKE '%" +
+                busqueda + "%'";
+            List<string> lista = new List<string>();
+
+            if (this.AbrirConexion())
+            {
+                MySqlCommand cmd = new MySqlCommand(query, conexion);
+                try
+                {
+                    MySqlDataReader dataReader = cmd.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        lista.Add(Convert.ToString(dataReader["Modelo"]));
+                    }
+                    dataReader.Close();
+                }
+                catch (MySqlException ex1)
+                {
+                    MessageBox.Show(ex1.Message);
+                    return null;
+                }
+                catch (Exception ex2)
+                {
+                    MessageBox.Show(ex2.StackTrace);
+                    MessageBox.Show(ex2.Message);
+                    return null;
+                }
+                this.CerrarConexion();
+                return lista;
+            }
+            else
+            {
+                return null;
+            }
+        }
     }
 }

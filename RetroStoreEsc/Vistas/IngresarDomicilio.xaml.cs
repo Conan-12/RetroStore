@@ -37,7 +37,7 @@ namespace RetroStoreEsc.Vistas
                 Compra compra = new Compra();
 
                 compra.Direccion_Envio = txtDireccion.Text;
-                compra.CP_Envio = Convert.ToInt32(txtCP.Text);
+                compra.CP_Envio = txtCP.Text;
                 compra.Fecha_Compra = DateTime.Now;
 
                 pasar.Contenido.Content = new Ticket(pasar, compra);

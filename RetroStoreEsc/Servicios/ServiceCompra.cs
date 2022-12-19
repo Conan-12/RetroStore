@@ -67,11 +67,12 @@ namespace RetroStoreEsc.Servicios
             {
                 if (this.AbrirConexion())
                 {
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Compra (fecha_Compra, direccion_Envio, cP_Envio) VALUES (@fecha_Compra, @direccion_Envio, @cP_Envio)", conexion);
+                    MySqlCommand cmd = new MySqlCommand("INSERT INTO Compra (fecha_Compra, direccion_Envio, cP_Envio, Id_Usuario) VALUES (@fecha_Compra, @direccion_Envio, @cP_Envio, @Id_Usuario)", conexion);
 
                     cmd.Parameters.AddWithValue("@fecha_Compra", compra.Fecha_Compra);
                     cmd.Parameters.AddWithValue("@direccion_Envio", compra.Direccion_Envio);
                     cmd.Parameters.AddWithValue("@cP_Envio", compra.CP_Envio);
+                    cmd.Parameters.AddWithValue("@Id_Usuario", compra.Id_Usuario);
 
                     cmd.ExecuteNonQuery();
                     this.CerrarConexion();
@@ -135,7 +136,7 @@ namespace RetroStoreEsc.Servicios
                         compra.Id_Compra = Convert.ToInt32(dataReader["Id_Compra"]);
                         compra.Fecha_Compra = Convert.ToDateTime(dataReader["Fecha_Compra"]);
                         compra.Direccion_Envio = Convert.ToString(dataReader["Direccion_Envio"]);
-                        compra.CP_Envio = Convert.ToInt32(dataReader["CP_Envio"]);
+                        compra.CP_Envio = Convert.ToString(dataReader["CP_Envio"]);
 
                         lista.Add(compra);
                     }

@@ -15,7 +15,7 @@ namespace RetroStoreEsc.Servicios
         public string cadenaCnx;
         public MySqlConnection conexion;
         string server = "localhost";
-        string database = "PlanTech";
+        string database = "RetroStore";
         string user = "root";
         string password = "978607Ale";
 

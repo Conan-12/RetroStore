@@ -24,7 +24,6 @@ namespace RetroStoreEsc.Vistas
     {
         MainWindow pasar;
         List<Detalle_Venta> lista = new List<Detalle_Venta>();
-        int idCompra;
         public Ticket(MainWindow mainWindow, Compra compra)
         {
             InitializeComponent();
@@ -35,7 +34,7 @@ namespace RetroStoreEsc.Vistas
             ServiceUsuarios serviceUsuarios = new ServiceUsuarios();
             ServiceCompra serviceCompra = new ServiceCompra();
 
-            List<Detalle_Venta> listaDetalleVenta = service_Detalle_Venta.SelectId(0);
+            List<Detalle_Venta> listaDetalleVenta = service_Detalle_Venta.Select_Con_IdCompra(1);
 
             Usuarios usuario = serviceUsuarios.SelectUsuarioActivo();
 
@@ -51,25 +50,14 @@ namespace RetroStoreEsc.Vistas
             contentArticulos.Content = listaArticulos;
             txtTotal.Content = "$" + listaArticulos.totalCompra;
 
-
+            compra.Id_Usuario = usuario.Id_Usuario;
+            serviceCompra.Insertar(compra);
 
             List<Compra> compras = serviceCompra.Select();
 
-            if (compras.Count == 0)
-            {
-                idCompra = 1;
-            }
-            else
-            {
-                idCompra = compras[compras.Count - 1].Id_Compra + 1;
-            }
-
-            compra.Id_Compra = idCompra;
-            serviceCompra.Insertar(compra);
-
             foreach (Detalle_Venta venta in lista)
             {
-                venta.Id_Compra = idCompra;
+                venta.Id_Compra = compras[compras.Count - 1].Id_Compra;
                 service_Detalle_Venta.Actualizar(venta);
             }
 

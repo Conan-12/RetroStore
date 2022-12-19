@@ -112,20 +112,15 @@ namespace RetroStoreEsc.Vistas
             #endregion
 
             Service_Detalle_Venta service_Detalle_Venta = new Service_Detalle_Venta();
-            ServiceUsuarios serviceUsuarios = new ServiceUsuarios();
 
-            List<Detalle_Venta> listaDetalleVenta = service_Detalle_Venta.SelectId(0);
-            Usuarios usuario = serviceUsuarios.SelectUsuarioActivo();            
+            List<Detalle_Venta> listaDetalleVenta = service_Detalle_Venta.DetallesVenta_Carrito_UsuarioActivo();
 
             foreach (Detalle_Venta venta in listaDetalleVenta)
             {
-                if (venta.Id_Usuario == usuario.Id_Usuario)
-                {
-                    ObjetoItemCarrito item = new ObjetoItemCarrito(venta.Id_Producto, venta.Cantidad, recursos[venta.Id_Producto], venta.Id_Venta, pasar);
-                    total += item.total;
-                    contents[j].Content = item;
-                    j++;
-                }
+                ObjetoItemCarrito item = new ObjetoItemCarrito(venta.Id_Producto, venta.Cantidad, recursos[venta.Id_Producto], venta.Id_Venta, pasar);
+                total += item.total;
+                contents[j].Content = item;
+                j++;
             }
 
             txtTotal.Content = "Total: $" + total.ToString();
